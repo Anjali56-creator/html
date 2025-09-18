@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lecture05</title>
+</head>
+<body>
+  <h1>LECTURE 05</h1>
+  <h2>HTML Media and Symbol Entities Explanation</h2>
+
+  <section>
+    <h2>Part 1: HTML5 &lt;video&gt; Tag Basics</h2>
+    <p>
+      The <code>&lt;video&gt;</code> tag embeds video in web pages natively without plugins.
+      Example of a simple video tag:
+    </p>
+    <pre><code>&lt;video src="my-awesome-video.mp4" controls&gt;&lt;/video&gt;</code></pre>
+    <p>
+      Adding the <code>controls</code> attribute enables default browser video controls
+      for play, pause, volume, and fullscreen.
+    </p>
+    <p>
+      You can also specify width and height:
+    </p>
+    <pre><code>&lt;video src="video.mp4" width="640" height="360" controls&gt;&lt;/video&gt;</code></pre>
+    <p>
+      The <code>autoplay</code> attribute makes video start automatically but usually requires
+      <code>muted</code> to avoid browser blocking:
+    </p>
+    <pre><code>&lt;video src="video.mp4" autoplay muted controls&gt;&lt;/video&gt;</code></pre>
+    <p>
+      The <code>loop</code> attribute enables the video to repeat continuously.
+    </p>
+    <p>
+      The <code>poster</code> attribute sets an image displayed before the video plays:
+    </p>
+    <pre><code>&lt;video src="video.mp4" poster="images/video-thumbnail.jpg" controls&gt;&lt;/video&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>Part 2: HTML5 &lt;audio&gt; Tag</h2>
+    <p>The <code>&lt;audio&gt;</code> tag works like the video tag but for sound only.</p>
+    <pre><code>&lt;p&gt;Listen to our theme song:&lt;/p&gt;
+&lt;audio src="audio/theme-song.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+    <p>Supports attributes like <code>autoplay</code>, <code>loop</code>, and <code>muted</code>.</p>
+  </section>
+
+  <section>
+    <h2>Part 3: Using Multiple Sources with &lt;source&gt;</h2>
+    <p>
+      To ensure maximum browser compatibility for videos, include multiple source formats inside the <code>&lt;video&gt;</code> tag:
+    </p>
+    <pre><code>&lt;video controls poster="images/thumbnail.jpg"&gt;
+  &lt;source src="videos/my-video.webm" type="video/webm"&gt;
+  &lt;source src="videos/my-video.mp4" type="video/mp4"&gt;
+  Sorry, your browser doesn't support embedded videos.
+&lt;/video&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>Part 4: Adding Captions and Subtitles with &lt;track&gt;</h2>
+    <p>The <code>&lt;track&gt;</code> element adds subtitles and captions for accessibility:</p>
+    <pre><code>&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;track src="captions_en.vtt" kind="captions" srclang="en" label="English"&gt;
+  &lt;track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Español"&gt;
+&lt;/video&gt;</code></pre>
+    <p><strong>Attributes explained:</strong></p>
+    <ul>
+      <li><code>src</code>: Path to captions (.vtt) file</li>
+      <li><code>kind</code>: Type of text track (e.g., captions, subtitles)</li>
+      <li><code>srclang</code>: Language of the track</li>
+      <li><code>label</code>: Track name shown in player menu</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Part 5: Video Format Compatibility</h2>
+    <p>Not all browsers support the same formats. Common formats include:</p>
+    <ul>
+      <li><code>.mp4</code> (H.264) - widely supported</li>
+      <li><code>.webm</code> (VP8/VP9) - good support on Chrome, Firefox</li>
+      <li><code>.ogg</code> (Theora) - older format</li>
+    </ul>
+    <p>
+      Browsers try the <code>&lt;source&gt;</code> list in order and use the first supported format.
+    </p>
+  </section>
+
+  <section>
+    <h2>Part 6: HTML Symbol Entities</h2>
+    <p>To display special characters safely, use HTML entity names or numbers:</p>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Description</th>
+          <th>Entity Name</th>
+          <th>Entity Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>©</td>
+          <td>Copyright</td>
+          <td>&amp;copy;</td>
+          <td>&amp;#169;</td>
+        </tr>
+        <tr>
+          <td>®</td>
+          <td>Registered Trademark</td>
+          <td>&amp;reg;</td>
+          <td>&amp;#174;</td>
+        </tr>
+        <tr>
+          <td>™</td>
+          <td>Trademark</td>
+          <td>&amp;trade;</td>
+          <td>&amp;#8482;</td>
+        </tr>
+        <tr>
+          <td>&lt;</td>
+          <td>Less-than (for showing code)</td>
+          <td>&amp;lt;</td>
+          <td>&amp;#60;</td>
+        </tr>
+        <tr>
+          <td>&gt;</td>
+          <td>Greater-than (for showing code)</td>
+          <td>&amp;gt;</td>
+          <td>&amp;#62;</td>
+        </tr>
+        <tr>
+          <td>&amp;</td>
+          <td>Ampersand</td>
+          <td>&amp;amp;</td>
+          <td>&amp;#38;</td>
+        </tr>
+        <tr>
+          <td>"</td>
+          <td>Double Quote</td>
+          <td>&amp;quot;</td>
+          <td>&amp;#34;</td>
+        </tr>
+        <tr>
+          <td>€</td>
+          <td>Euro Sign</td>
+          <td>&amp;euro;</td>
+          <td>&amp;#8364;</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Why use entities for <code>&lt;</code> and <code>&gt;</code>? Because &lt; and &gt; are interpreted as HTML tags. To literally display &lt;p&gt;, write <code>&amp;lt;p&amp;gt;</code>.
+    </p>
+  </section>
+
+<a href="lecture01.html">First notes</a>
+</body>
+</html>

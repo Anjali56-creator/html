@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture_04</title>
+</head>
+<body>
+    <h1>About FORM in HTML</h1><hr>
+    <h3>Tags used in FORMS in HTML</h3>
+
+    <ol>
+        <h4>INPUT TAG</h4>
+        <ul>
+            <li>The &ltinput&gtElement: The Box for Your Stuff</li>
+            <li>This is the most common form tag. It's a self-closing tag that creates an input field. Its behavior changes based on its type attribute</li>
+        <ul>
+            <li><code>type="text"</code>: Single-line text input.</li>
+            <li><code>type="password"</code>: Text input where characters are hidden.</li>
+            <li><code>type="email"</code>: Input for e-mail addresses.</li>
+            <li><code>type="radio"</code>: Radio buttons for single selections.</li>
+            <li><code>type="checkbox"</code>: Checkboxes for multiple selections.</li>
+            <li><code>type="submit"</code>: Button to submit the form.</li>
+            <li><code>type="reset"</code>: Button to reset form inputs.</li>
+            <li>And many more types.</li>
+        </ul>
+       The most basic type is text &lt input type="text"&gt</li>
+        </ul>
+    </ol>
+    <h3>LABLE TAG</h3>
+    <ul>
+       <h4> <li>The Problem : We have a box, but the user has no idea what they are supposed to type into it. Is it for a name? An email? A search query? The box is meaningless without a description.</li>
+
+        <li>The Solution : We need to add a descriptive piece of text. The correct HTML tag for this is the &ltlabel&gt. It's a tag specifically designed to be the title for a form field.</li>
+        <h2>&lt;textarea&gt; Tag</h2>
+        <b>The <code>&lt;textarea&gt;</code> tag defines a multi-line text input field for longer user input such as comments or messages.</b>
+        <h2>&lt;select&gt; and &lt;option&gt; Tags</h2>
+        <strong>The <code>&lt;select&gt;</code> tag creates a drop-down list, while the <code>&lt;option&gt;</code> tags define the selectable options inside the list.</strong>
+    </ul> 
+    <pre>
+        <h3>The Need for "Select One" - Radio Buttons</h3>
+
+<pre>The Problem:What if you want to ask a question where the user can only choose one option from a predefined list? For example, "What is your gender?" or "What is your T-shirt size (Small, Medium, Large)?" A text box is a bad solution—users could type anything ("Med", "M", "medium"), making the data inconsistent.
+
+The Solution:We need an input type where selecting one option automatically de-selects all others. This is the **radio button**: <input type="radio">.
+
+This introduces a new rule. How does the browser know which radio buttons belong to the same question?
+
+The Rule:All radio buttons in a single group must share the same name attribute. The name acts as the group identifier.
+</pre>
+<a href="lecture05_.html">For next lecture notes</a>
+</body>
+</html>

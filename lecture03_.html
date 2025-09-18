@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture03</title>
+</head>
+<body>
+    <header>
+        <h1>HTML Fundamentals & File Paths</h1>
+    </header>
+    <main>
+            <h2>Step 1: The Fundamental Truth</h2>
+            <p>A website is not a single file. It is a collection of files (HTML, CSS, JS, images) organized in folders.</p>
+        
+
+        <hr>
+            <h2>Step 2: The Core Problem</h2>
+            <p>
+                If <code>index.html</code> needs to display <code>logo.png</code>, it needs an exact, unambiguous address.
+                Browsers use <strong>file paths</strong> to locate files.
+            </p>
+        </section>
+
+        <section>
+            <h2>Relative File Paths (Most Important)</h2>
+            <p>Paths given relative to the current file location. You will use this 99% of the time.</p>
+            <ol>
+                <li><b>Same folder:</b> Just use the filename (e.g. <code>about.html</code>).</li>
+                <li><b>Subfolder:</b> Include folder name with slash (e.g. <code>images/logo.png</code>).</li>
+                <li><b>Parent folder:</b> Use <code>../</code> to go up one level (e.g. <code>../images/logo.png</code>).</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>HTML Boilerplate (Essential Template)</h2>
+            <p>The boilerplate provides essential setup:</p>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code> tells browser to use HTML5 standards mode.</li>
+                <li><code>&lt;html lang="en"&gt;</code> declares the page language for SEO and accessibility.</li>
+                <li><code>&lt;meta charset="UTF-8"&gt;</code> sets character encoding to avoid garbled text.</li>
+                <li><code>&lt;meta name="viewport" ...&gt;</code> ensures responsive layout on mobile devices.</li>
+                <li><code>&lt;title&gt;</code> sets browser tab title and SEO info.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Grouping Content with &lt;div&gt;</h2>
+            <p>The <code>&lt;div&gt;</code> is a generic container to group HTML elements so they can be treated as one unit.</p>
+            <pre><code>&lt;div&gt;
+  &lt;img src="avatar.png" alt="Avatar"&gt;
+  &lt;h2&gt;Arjun Kumar&lt;/h2&gt;
+  &lt;p&gt;Loves HTML.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Labels: <code>id</code> and <code>class</code></h2>
+            <p>Use <code>id</code> for unique elements and <code>class</code> for reusable groups.</p>
+            <pre><code>&lt;div id="main-header"&gt;...&lt;/div&gt;
+&lt;div class="profile-card"&gt;...&lt;/div&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Inline Grouping: <code>&lt;span&gt;</code></h2>
+            <p>Use <code>&lt;span&gt;</code> for inline styling within text without breaking the flow.</p>
+            <pre><code>&lt;p&gt;This is very &lt;span class="highlight"&gt;important&lt;/span&gt; info.&lt;/p&gt;</code></pre>
+        </section>
+    </main>
+</body>
+<a href="lecture04_.html">Next lecture notes</a>
+</html>

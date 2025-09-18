@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture02</title>
+</head>
+<body>
+    <header>
+        <h1>Lecture 02 Notes</h1>
+        <h2>Web Development Essentials</h2>
+        <hr>
+    </header>
+
+    <section>
+        <h3>About Table Tag in HTML</h3>
+        <table border="1" cellpadding="8">
+            <caption><strong>HTML Table Tags Overview</strong></caption>
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;table&gt;</td>
+                    <td>Main container for the table. All other table elements go inside this tag.</td>
+                </tr>
+                <tr>
+                    <td>&lt;tr&gt;</td>
+                    <td>Defines a row within the table.</td>
+                </tr>
+                <tr>
+                    <td>&lt;th&gt;</td>
+                    <td>Table header cell. Bold and centered text, used for column headings.</td>
+                </tr>
+                <tr>
+                    <td>&lt;td&gt;</td>
+                    <td>Standard table data cell for content.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <section>
+        <h4>Note</h4>
+        <strong>Spanning Rows & Columns</strong>
+        <ul>
+            <li>Use <code>colspan</code> to merge cells horizontally.<br>
+                Example: <code>&lt;td colspan="2"&gt;This cell spans two columns.&lt;/td&gt;</code>
+            </li>
+            <li>Use <code>rowspan</code> to merge cells vertically.<br>
+                Example: <code>&lt;td rowspan="3"&gt;This cell spans three rows.&lt;/td&gt;</code>
+            </li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>Nested Lists</h3>
+        <pre>
+The key rule for creating a nested list is that the child (inner) list must be inside an &lt;li&gt; element of the parent (outer) list.
+
+Steps:
+1. Start your main list (&lt;ol&gt; or &lt;ul&gt;).
+2. Create a parent list item (&lt;li&gt;).
+3. Inside the parent &lt;li&gt;, create a new (nested) list.
+4. Add sub-list items.
+5. Close the inner list and then the parent &lt;li&gt;.
+        </pre>
+    </section>
+
+    <footer>
+        <a href="lecture03_.html"><strong>Notes of next lecture</strong></a>
+    </footer>
+</body>
+</html>
